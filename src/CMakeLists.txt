@@ -21,3 +21,7 @@ target_link_libraries(gasfile Garfield::Garfield ROOT::RIO)
 
 add_executable(field field.cpp)
 target_link_libraries(field Garfield::Garfield ROOT::RIO)
+
+add_executable(mwpc mwpc.cpp)
+target_compile_options(mwpc PRIVATE "-O3;-fopenmp")
+target_link_libraries(mwpc Garfield::Garfield ROOT::RIO ROOT::Tree OpenMP::OpenMP_CXX)
