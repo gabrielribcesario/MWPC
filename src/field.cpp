@@ -24,13 +24,13 @@ int main(int argc, char **argv) {
     // Cathode wire spacing [cm].
     const double catG = 0.2;
     // Cathode wire radius [cm].
-    const double catR = 0.005;
+    const double catR = 0.0025;
     // Cathode wire potential [V].
     const double catV = 0.;
     // Anode wire spacing [cm].
     const double anoG = 0.4;
-    // Anode wire diameter [cm].
-    const double anoR = 0.002;
+    // Anode wire radius [cm].
+    const double anoR = 0.001;
     // Anode wire potential [V].
     const double anoV = 2100.;
     // Cathodic-Anodic planes distance [cm], anodic plane at z = 0
@@ -65,7 +65,7 @@ int main(int argc, char **argv) {
 
     ComponentNeBem3d cmp;
     cmp.SetGeometry(&geo);
-    cmp.SetTargetElementSize(0.001);
+    cmp.SetTargetElementSize(0.0001);
     cmp.SetMinMaxNumberOfElements(1, 5); // fine-tune element size and number later
     cmp.UseLUInversion();
     cmp.SetNumberOfThreads(8);
