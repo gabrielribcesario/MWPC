@@ -1,0 +1,13 @@
+name: mwpc
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - root=6.36.10
+  - gcc=14.3.0
+  - gxx=14.3.0
+  - libgomp=15.1.0
+  - gfortran=14.3.0
+  - gsl=2.7
+  - cmake=4.1.1
+  - make=4.4.1
