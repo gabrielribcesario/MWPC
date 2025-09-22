@@ -32,5 +32,8 @@ target_link_libraries(WirePlane Garfield::Garfield)
 
 # ---Build executables-----------------------------------------------------------
 
+add_executable(gasfile src/gasfile.cpp)
+target_link_libraries(gasfile Garfield::Garfield)
+
 add_executable(field src/field.cpp)
 target_link_libraries(field Garfield::Garfield ROOT::Core WirePlane)
