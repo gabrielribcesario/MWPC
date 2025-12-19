@@ -37,3 +37,8 @@ target_link_libraries(gasfile Garfield::Garfield)
 
 add_executable(field src/field.cpp)
 target_link_libraries(field Garfield::Garfield ROOT::Core WirePlane)
+
+add_executable(fluctuations src/fluctuations.cpp)
+# target_compile_options(fluctuations PRIVATE -g3 -Og -fsanitize=thread)
+# target_link_options(fluctuations PRIVATE -fsanitize=thread)
+target_link_libraries(fluctuations Garfield::Garfield ROOT::Hist ROOT::Core WirePlane)
